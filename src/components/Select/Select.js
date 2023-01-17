@@ -1,7 +1,7 @@
 import React from 'react';
 import './Select.css';
 
-export default function Select({ head, setHead, middle, setMiddle }) {
+export default function Select({ head, setHead, middle, setMiddle, bottom, setBottom }) {
   return (
     <div className="select">
       <h1>Pick a head</h1>
@@ -28,6 +28,19 @@ export default function Select({ head, setHead, middle, setMiddle }) {
         <option value="dress">Dress</option>
         <option value="pink">Pink Shirt</option>
         <option value="red">Red Shirt</option>
+      </select>
+
+      <h1>Pick a bottom</h1>
+      <select
+        value={bottom}
+        onChange={(e) => {
+          setBottom(e.target.value);
+        }}
+      >
+        <option value="blue">Jeans</option>
+        <option value="dog">Fancy</option>
+        <option value="leg">Giant Leg</option>
+        <option value="white">White</option>
       </select>
     </div>
   );
